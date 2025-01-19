@@ -4,10 +4,10 @@ import os
 import dill
 import pandas as pd
 
+path = os.environ.get('PROJECT_PATH', '.')
 
 
 def predict():
-    path = os.environ.get('PROJECT_PATH', '.')
 
     with open(f'{path}/data/models/cars_pipe_.pkl', 'rb') as file:
         model = dill.load(file)
