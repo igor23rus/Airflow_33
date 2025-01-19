@@ -9,7 +9,7 @@ path = os.environ.get('PROJECT_PATH', '.')
 
 def predict():
 
-    with open(f'{path}/data/models/cars_pipe_.pkl', 'rb') as file:
+    with open(f'{path}/data/models/cars_pipe_{datetime.now().strftime("%Y%m%d%H%M")}.pkl', 'rb') as file:
         model = dill.load(file)
 
     new_df = pd.DataFrame(columns=['ID', 'PRICE', 'RESULT'])

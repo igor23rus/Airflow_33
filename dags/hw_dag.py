@@ -5,7 +5,7 @@ from airflow.models import DAG
 from airflow.operators.python import PythonOperator
 
 
-path = '/opt/airflow_hw'
+path = '/opt/airflow'
 os.environ['PROJECT_PATH'] = path
 sys.path.insert(0, path)
 
